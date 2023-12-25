@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Bazar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h3>T-SHIRT BAZAR</h3>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-items">
+
+            <a href="index.html">Home</a>
+            <a href="#products">Products</a>
+            <a href="underMaintain.html">Categories</a>
+            <a href="underMaintain.html">Cart</a>
+            <a href="underMaintain.html">Account</a>
+        </div>
+    </nav>
+
+    <!-- Image Sliding -->
+    <div class="carousel-container">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/originals/63/89/bc/6389bc75f8e8eaf5627c243d4e85ac5a.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/178/364/original/super-sale-offer-and-discount-banner-template-for-marketing-and-vector.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://wallpaperaccess.com/full/2593105.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- image Sliding End -->
+
+    <!-- Product Section -->
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/2360/8505/products/Crew-Neck-Black-Casual-Men_s-T-Shirt_860x.jpg?v=1560359753"
+                alt="Product 1">
+            <h3>Black and Red Stylish T-Shirt</h3>
+            <p>"Comfort meets style. Soft cotton blend, vibrant colors. Effortless cool with a bold graphic design. Your
+                new favorite tee."</p>
+            <p>Rs 299</p>
+            <div class="button-container">
+                <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+                <button id="buyNowbtn" onclick="buyNow('Product 1', 299)">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/2360/8505/products/Crew-Neck-Black-Casual-Men_s-T-Shirt_860x.jpg?v=1560359753"
+                alt="Product 1">
+            <h3>Black and Red Stylish T-Shirt</h3>
+            <p>"Comfort meets style. Soft cotton blend, vibrant colors. Effortless cool with a bold graphic design. Your
+                new favorite tee."</p>
+            <p>Rs 299</p>
+            <div class="button-container">
+                <button onclick="addToCart('Product 2', 19.99)">Add to Cart</button>
+                <button id="buyNowbtn" onclick="buyNow('Product 2', 19.99)">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/2360/8505/products/Crew-Neck-Black-Casual-Men_s-T-Shirt_860x.jpg?v=1560359753"
+                alt="Product 3">
+            <h3>Black and Red Stylish T-Shirt</h3>
+            <p>"Comfort meets style. Soft cotton blend, vibrant colors. Effortless cool with a bold graphic design. Your
+                new favorite tee."</p>
+            <p>Rs 299</p>
+            <div class="button-container">
+                <button onclick="addToCart('Product 3', 19.99)">Add to Cart</button>
+                <button id="buyNowbtn" onclick="buyNow('Product 3', 19.99)">Buy Now</button>
+            </div>
+        </div>
+
+    </section>
+    <!-- Product Section End -->
+
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h3>T-SHIRT BAZAR</h3>
+            </div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#products">Products</a>
+                <a href="underMaintain.html">Categories</a>
+                <a href="underMaintain.html">Cart</a>
+                <a href="underMaintain.html">Account</a>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2023 T-SHIRT BAZAR. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

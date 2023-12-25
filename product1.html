@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .product {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            max-width: 100%;
+            max-height: 300px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .product p {
+            color: #666;
+        }
+
+        .price {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .buy-now-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .buy-now-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CheckOut </h1>
+    </header>
+
+    <section>
+        <h2>Product Details</h2>
+
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/2360/8505/products/Crew-Neck-Black-Casual-Men_s-T-Shirt_860x.jpg?v=1560359753"
+                alt="Product Image">
+            <h3>Black and Red Stylish T-Shirt</h3>
+            <p>"Comfort meets style. Soft cotton blend, vibrant colors. Effortless cool with a bold graphic design. Your
+                new favorite tee."</p>
+            <p class="price">Rs 299</p>
+            <button class="buy-now-button" onclick="completePurchase()">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 Buy Now Page
+    </footer>
+
+    <script>
+        function completePurchase() {
+            // Implement your purchase completion logic here
+            alert('Purchase completed successfully!');
+            // You may want to redirect the user to a confirmation page or perform other actions.
+        }
+    </script>
+
+</body>
+
+</html>
