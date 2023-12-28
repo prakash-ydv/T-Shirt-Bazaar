@@ -57,6 +57,7 @@ nav a:hover {
 
 .menu-items a {
     margin-left: 15px;
+    font-size: 17px;
 }
 
 .menu-items.show {

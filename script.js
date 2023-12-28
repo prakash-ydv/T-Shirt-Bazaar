@@ -1,3 +1,4 @@
+
 function toggleMenu() {
     const menuItems = document.querySelector('.menu-items');
     menuItems.classList.toggle('show');
@@ -41,4 +42,9 @@ function buyNow(productName, price) {
         alert('Redirecting to Checkout Page...');
         window.location.href = 'product1.html'; // Replace 'checkout.html' with the actual path or URL of your checkout page.
     }
+}
+
+function redirectToCategory(categoryName, categoryPage) {
+            
+    window.location.href = categoryPage;
 }
