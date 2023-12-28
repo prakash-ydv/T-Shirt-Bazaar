@@ -260,7 +260,7 @@ footer {
 @media only screen and (max-width: 600px) {
     .footer-links {
         flex: 1 1 100%;
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
 
@@ -279,7 +279,7 @@ footer-copyright {
 }
 
 .footer-copyright p {
-    padding-top: 25px;
-    font-size: 14px;
+    padding-top: 20px;
+    font-size: 12px;
     margin: 0;
 }
