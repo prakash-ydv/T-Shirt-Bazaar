@@ -23,6 +23,63 @@
             padding: 5px;
         }
 
+        /* loader */
+
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 8px solid #3498db;
+            border-top: 8px solid #f3f3f3;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        body.loaded #loader {
+            display: none;
+        }
+
+        body.loaded section,
+        body.loaded .refund-section,
+        body.loaded footer {
+            display: block;
+        }
+
+        body.loading section,
+        body.loading .refund-section,
+        body.loading footer {
+            display: none;
+        }
+
+        /* loader end */
+        
+        header h1{
+            font-size: 25px;
+        }
+
         section {
             max-width: 600px;
             margin: 20px auto;
@@ -36,24 +93,13 @@
             text-align: center;
         }
 
-        .products {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            height: auto;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
         .products h2 {
             text-align: center;
             color: #333;
         }
 
         .product {
+            border-radius: 10px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -187,6 +233,10 @@
 
 <body>
 
+    <div id="loader">
+        <div class="loader"></div>
+    </div>
+
     <header>
         <h1>CheckOut </h1>
     </header>
@@ -260,6 +310,18 @@
     </footer>
 
     <script>
+
+        // JavaScript to handle loading states
+
+        document.body.classList.add('loading');
+
+        window.addEventListener('load', function () {
+            document.body.classList.remove('loading');
+            document.body.classList.add('loaded');
+        });
+
+
+
         function redirectToCategory(categoryName, categoryPage) {
             
             window.location.href = categoryPage;

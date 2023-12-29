@@ -1,4 +1,9 @@
 
+
+// loader
+// loader end
+
+
 function toggleMenu() {
     const menuItems = document.querySelector('.menu-items');
     menuItems.classList.toggle('show');
@@ -21,6 +26,8 @@ function updateCarousel() {
 }
 
 setInterval(showNextImage, 3000); // Change the interval (in milliseconds) as needed
+
+
 
 // Image Sliding End
 

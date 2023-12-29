@@ -20,45 +20,56 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 2px;
+            padding: 1px;
+        }
+
+        header h1 {
+            font-size: 25px;
         }
 
         section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: end;
             background-position: center;
             background-size: cover;
             height: 35vh;
-            width: 80vw;
+            width: 75vw;
             margin: 20px auto;
             padding: 20px;
+            border-radius: 15px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
+            position: relative;
+            /* Add this line */
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
         }
 
         section:hover {
             transform: scale(1.05);
         }
 
-        .category-content {
-            text-align: center;
-            color: #333;
-        }
-
-        .category img {
-            max-width: 100%;
-            max-height: 200px;
-            height: auto;
-            margin-bottom: 15px;
+        .category-content h2 {
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 12);
+            /* Add this line for text shadow */
         }
 
         footer {
             text-align: center;
-            padding: 10px;
             background-color: #333;
             color: white;
             bottom: 0;
@@ -79,29 +90,28 @@
         <h1>Explore Categories</h1>
     </header>
 
-    <section id="digitalCategory" onclick="redirectToCategory('digital', 'underMaintain.html')" style="background-image: url('https://via.placeholder.com/800x600');">
-        <div class="category-content">
-            <h2>Digital Categories</h2>
-            <p>Discover the latest digital products.</p>
-            <img src="digital-icon.png" alt="Digital Icon">
-        </div>
-    </section>
-
-    <section id="fashionCategory" onclick="redirectToCategory('fashion', 'index.html')" style="background-image: url('https://via.placeholder.com/800x600');">
-        <div class="category-content">
-            <h2>Fashion Categories</h2>
-            <p>Explore the latest trends in fashion.</p>
-            <img src="fashion-icon.png" alt="Fashion Icon">
-        </div>
-    </section>
-
-    <section id="giftCategory" onclick="redirectToCategory('gift', 'underMaintain.html')" style="background-image: url('https://via.placeholder.com/800x600');">
+    <section id="giftCategory" onclick="redirectToCategory('gift', 'underMaintain.html')"
+        style="background-image: url('https://www.mantelligence.com/wp-content/uploads/2019/02/cute-gifts-for-girlfriend-main.jpg');">
         <div class="category-content">
             <h2>Gift Categories</h2>
-            <p>Find the perfect gift for your loved ones.</p>
-            <img src="gift-icon.png" alt="Gift Icon">
         </div>
     </section>
+
+    <section id="digitalCategory" onclick="redirectToCategory('digital', 'underMaintain.html')"
+        style="background-image: url('https://cdn.mos.cms.futurecdn.net/DxpaKaHPBL5yF8vBjh2MjX.jpg');">
+        <div class="category-content">
+            <h2>Digital Categories</h2>
+
+        </div>
+    </section>
+
+    <section id="fashionCategory" onclick="redirectToCategory('fashion', 'index.html')"
+        style="background-image: url('https://wallpaperaccess.com/full/2489629.jpg');">
+        <div class="category-content">
+            <h2>Fashion Categories</h2>
+        </div>
+    </section>
+
 
     <footer>
         &copy; 2023 Categories Page
@@ -109,7 +119,7 @@
 
     <script>
         function redirectToCategory(categoryName, categoryPage) {
-            
+
             window.location.href = categoryPage;
         }
     </script>
