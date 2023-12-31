@@ -197,39 +197,32 @@
     </div>
 
     <script>
-        function validateForm() {
-            // Get all required fields
-            const requiredFields = document.querySelectorAll('.required');
 
-            // Flag to check if all fields are filled
-            let isValid = true;
+function validateForm() {
+        // Get all required fields
+        const requiredFields = document.querySelectorAll('.required');
 
-            // Iterate through each required field
-            requiredFields.forEach(field => {
-                const inputField = field.nextElementSibling;
+        // Flag to check if all fields are filled
+        let isValid = true;
 
-                // Check if the input field is empty
-                if (!inputField.value.trim()) {
-                    isValid = false;
-                }
-            });
+        // Iterate through each required field
+        requiredFields.forEach(field => {
+            const inputField = field.nextElementSibling;
 
-            // Display alert if any required field is empty
-            if (!isValid) {
-                alert('Please fill in all the required details.');
-            } else {
-                // Proceed with payment logic
-                const paymentMethod = document.getElementById('paymentMethod').value;
-
-                if (paymentMethod === 'upi') {
-                    // Implement UPI payment logic, e.g., redirect to a UPI payment gateway
-                    alert('Redirecting to UPI payment gateway...');
-                } else {
-                    // Implement credit card or other payment logic
-                    alert('Processing credit card payment...');
-                }
+            // Check if the input field is empty
+            if (!inputField.value.trim()) {
+                isValid = false;
             }
+        });
+
+        // Display alert if any required field is empty
+        if (!isValid) {
+            alert('Please fill in all the required details.');
+        } else {
+            // Redirect to undermaintain.html
+            window.location.href = 'underMaintain.html';
         }
+    }
     </script>
 
 </body>
