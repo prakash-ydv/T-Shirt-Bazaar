@@ -4,53 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
+    <title>Secure Checkout</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto+Mono:wght@600&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: poppins'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f8f8f8;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
+        /* Reduce placeholder opacity */
+        input::placeholder,
+        select::placeholder {
+            opacity: 0.7;
+            /* Adjust the opacity as needed */
+        }
+
+        /* Optional: Increase opacity on focus for better visibility */
+        input:focus::placeholder,
+        select:focus::placeholder {
+            opacity: 1;
+        }
+
+
         .checkout-container {
-            max-width: 600px;
-            margin: 50px auto;
+            max-width: 500px;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 24px;
+        }
+
+        form {
+            text-align: left;
         }
 
         label {
             display: block;
             margin-bottom: 8px;
-            color: #333;
         }
 
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 16px;
+        input,
+        select {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
             box-sizing: border-box;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        small {
+            display: block;
+            margin-top: -5px;
+            margin-bottom: 15px;
+            color: #888;
         }
 
         button {
             background-color: #4CAF50;
             color: white;
-            padding: 12px;
+            padding: 14px;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             width: 100%;
+            transition: background-color 0.3s;
         }
 
         button:hover {
             background-color: #45a049;
+        }
+
+        .payment-method-label {
+            margin-top: 20px;
+            display: block;
+        }
+
+        .required::before {
+            content: '* ';
+            color: #f00;
+        }
+
+        .proceed-button {
+            background-color: #8BC34A;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .proceed-button:hover {
+            background-color: #689F38;
         }
     </style>
 </head>
@@ -58,58 +122,112 @@
 <body>
 
     <div class="checkout-container">
-        <h2>Checkout</h2>
+        <h1>Complete Your Purchase</h1>
         <form>
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" required>
+            <label for="fullName" class="required">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Enter Full Name">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email" class="required">Email</label>
+            <input type="email" id="email" name="email" required placeholder="example@gmail.com">
 
-            <label for="phoneNumber">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Enter a 10-digit Phone Number" required>
-            </small>
+            <label for="phoneNumber" class="required">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Enter Phone Number"
+                required>
 
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" required>
+            <label for="address" class="required">Address</label>
+            <input type="text" id="address" name="address" required placeholder="Enter Full Address">
 
-            <label for="district">District</label>
-            <input type="text" id="district" name="district" required>
+            <label for="district" class="required">District</label>
+            <input type="text" id="district" name="district" required placeholder="Enter District">
 
-            <label for="pinCode">Pin Code</label>
-            <input type="text" id="pinCode" name="pinCode" required>
+            <label for="pinCode" class="required">Pin Code</label>
+            <input type="text" id="pinCode" name="pinCode" required placeholder="8 Digit Pin Number">
 
-            <label for="state">State</label>
+            <label for="state" class="required">State</label>
             <select id="state" name="state" required>
                 <option value="" selected disabled>Select State</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <!-- Add more states as needed -->
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu
+                </option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Puducherry">Puducherry</option>
             </select>
+
 
             <label for="landmark">Landmark</label>
-            <input type="text" id="landmark" name="landmark" required>
+            <input type="text" id="landmark" name="landmark" placeholder="Optional">
 
-            <label for="paymentMethod">Payment Method</label>
+            <label class="payment-method-label" for="paymentMethod">Payment Method</label>
             <select id="paymentMethod" name="paymentMethod">
                 <option value="upi">UPI</option>
-                <option value="creditCard">Credit Card</option>
             </select>
 
-            <button type="button" onclick="processPayment()">Proceed to Pay</button>
+            <button type="button" class="proceed-button" onclick="validateForm()">Proceed to Pay</button>
         </form>
     </div>
 
     <script>
-        function processPayment() {
-            const paymentMethod = document.getElementById('paymentMethod').value;
-            
-            if (paymentMethod === 'upi') {
-                // Implement UPI payment logic, e.g., redirect to a UPI payment gateway
-                alert('Redirecting to UPI payment gateway...');
+        function validateForm() {
+            // Get all required fields
+            const requiredFields = document.querySelectorAll('.required');
+
+            // Flag to check if all fields are filled
+            let isValid = true;
+
+            // Iterate through each required field
+            requiredFields.forEach(field => {
+                const inputField = field.nextElementSibling;
+
+                // Check if the input field is empty
+                if (!inputField.value.trim()) {
+                    isValid = false;
+                }
+            });
+
+            // Display alert if any required field is empty
+            if (!isValid) {
+                alert('Please fill in all the required details.');
             } else {
-                // Implement credit card or other payment logic
-                alert('Processing credit card payment...');
+                // Proceed with payment logic
+                const paymentMethod = document.getElementById('paymentMethod').value;
+
+                if (paymentMethod === 'upi') {
+                    // Implement UPI payment logic, e.g., redirect to a UPI payment gateway
+                    alert('Redirecting to UPI payment gateway...');
+                } else {
+                    // Implement credit card or other payment logic
+                    alert('Processing credit card payment...');
+                }
             }
         }
     </script>

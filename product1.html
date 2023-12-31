@@ -83,7 +83,7 @@
         section {
             max-width: 600px;
             margin: 20px auto;
-            padding: 20px;
+            padding: px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -137,7 +137,7 @@
             max-width: 100%;
             max-height: 200px;
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .product h3 {
@@ -179,12 +179,32 @@
 
 
         footer {
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            position: fixed;
             text-align: center;
-            padding: 10px 0px;
-            background-color: #333;
+            height: 55px;
+            background-color: white;
             color: white;
             bottom: 0;
             width: 100%;
+            border-top: 1px solid black;
+        }
+
+        .btn{
+            display: none;
+            border: none;
+            background-color: rgb(41, 194, 41);
+            height: 100%;
+            width: 50%;
+            border-left: 1px solid black;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        #cart_btn{
+            background-color: white;
         }
 
         @media only screen and (max-width: 600px) {
@@ -200,6 +220,10 @@
 
             .product .product_image {
                 max-width: 50vw;
+            }
+
+            .btn{
+                display:inline;
             }
         }
 
@@ -259,10 +283,11 @@
                     <option value="small">S</option>
                     <option value="medium">M</option>
                     <option value="large">L</option>
+                    <option value="large">XL</option>
                 </select>
 
                 <div class="button-container">
-                    <button id="buyNowbtn" onclick="buyNow('Product 1', 299)">Buy Now</button>
+                    <button id="buyNowbtn" onclick="redirectToCategory('buynow_btn','payment.html')">Buy Now</button>
                 </div>
 
             </div>
@@ -307,7 +332,8 @@
 
 
     <footer>
-        &copy; 2023 Buy Now Page
+        <button id="cart_btn" class="btn">ADD TO CART</button>
+        <button id="buynow_btn" onclick="redirectToCategory('buynow_btn','payment.html')" class="btn">BUY NOW</button>
     </footer>
 
     <script>
