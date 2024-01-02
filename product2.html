@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckOut Now</title>
     <link rel="stylesheet" href="product.css">
+    <script src="path/to/locomotive-scroll.min.js"></script>
+
+</head>
+
+<body class="data-scroll-container">
 
     <div id="loader">
         <div class="loader"></div>
@@ -105,50 +110,7 @@
         <button id="buynow_btn" onclick="redirectToCategory('buynow_btn','payment.html')" class="btn">BUY NOW</button>
     </footer>
 
-    <script>
-
-        // JavaScript to handle loading states
-
-        document.body.classList.add('loading');
-
-        window.addEventListener('load', function () {
-            document.body.classList.remove('loading');
-            document.body.classList.add('loaded');
-        });
-
-
-
-        function redirectToCategory(categoryName, categoryPage) {
-
-            window.location.href = categoryPage;
-        }
-
-        // image slider
-
-        const slides = document.querySelector('.slides');
-        const slide = document.querySelectorAll('.slide');
-        const totalSlides = slide.length;
-        let currentSlide = 0;
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlidePosition();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlidePosition();
-        }
-
-        function updateSlidePosition() {
-            slides.style.transform = `translateX(${-currentSlide * 100}%)`;
-        }
-
-        setInterval(nextSlide, 4000);
-
-        // image slider end
-    </script>
-
+    <script src="products.js"></script>
 </body>
 
 </html>

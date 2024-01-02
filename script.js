@@ -1,4 +1,15 @@
+// locomotive js 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const locomotive = new Locomotive({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,  // Example configuration option
+        // Add other configuration options as needed
+    });
+    locomotive.init();
+});
+
+// locomotive js end 
 
 // loader
 // loader end
