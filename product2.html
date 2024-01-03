@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckOut Now</title>
+    <link rel="shortcut icon"
+        href="https://www.360webdesigns.com/wp-content/uploads/2016/07/Services_ECommerce_v2-01.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="product.css">
     <script src="path/to/locomotive-scroll.min.js"></script>
 
@@ -50,7 +53,7 @@
                 <p>"Elevate your style with our Black Jerry T-shirt, featuring a playful Jerry print. Crafted for
                     comfort and charm, this shirt effortlessly combines casual coolness with a touch of whimsical fun.
                     Perfect for any occasion!."</p>
-                <p class="price">Rs 299</p>
+                <p class="price">Rs 99</p>
 
                 <label for="size">Select Size:</label>
                 <select id="size" name="size">
@@ -60,7 +63,9 @@
                 </select>
 
                 <div class="button-container">
-                    <button id="buyNowbtn" onclick="buyNow('Product 1', 299)">Buy Now</button>
+                    <button id="buyNowbtn"
+                        onclick="redirectToCategory('buynow_btn','https://razorpay.com/payment-button/pl_NK6UaWEiLaXBpU/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button')">Buy
+                        Now</button>
                 </div>
 
             </div>
@@ -107,7 +112,9 @@
     <footer>
         <button id="cart_btn" class="btn"
             onclick="alert('This Feature is Under Development !! Please Buy Directly')">ADD TO CART</button>
-        <button id="buynow_btn" onclick="redirectToCategory('buynow_btn','payment.html')" class="btn">BUY NOW</button>
+        <button id="buynow_btn"
+            onclick="redirectToCategory('buynow_btn','https://razorpay.com/payment-button/pl_NK6UaWEiLaXBpU/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button')"
+            class="btn">BUY NOW</button>
     </footer>
 
     <script src="products.js"></script>

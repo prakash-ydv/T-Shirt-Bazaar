@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckOut Now</title>
+    <link rel="shortcut icon"
+        href="https://www.360webdesigns.com/wp-content/uploads/2016/07/Services_ECommerce_v2-01.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="product.css">
     <script src="path/to/locomotive-scroll.min.js"></script>
 
@@ -28,24 +31,28 @@
             <div class="slider">
                 <div class="slides">
                     <div class="slide">
-                        <img src="https://i.pinimg.com/originals/60/13/84/601384c107b5e92bc9e4e4193f0b92ec.jpg" alt="Product 1" alt="Product 1">
+                        <img src="https://i.pinimg.com/originals/60/13/84/601384c107b5e92bc9e4e4193f0b92ec.jpg"
+                            alt="Product 1" alt="Product 1">
                     </div>
                     <div class="slide">
-                        <img src="https://i.pinimg.com/originals/60/13/84/601384c107b5e92bc9e4e4193f0b92ec.jpg" alt="Product 1" alt="Product 2">
+                        <img src="https://i.pinimg.com/originals/60/13/84/601384c107b5e92bc9e4e4193f0b92ec.jpg"
+                            alt="Product 1" alt="Product 2">
                     </div>
                     <div class="slide">
-                        <img src="https://i.pinimg.com/originals/60/13/84/601384c107b5e92bc9e4e4193f0b92ec.jpg" alt="Product 1" alt="Product 3">
+                        <img src="https://i.pinimg.com/originals/60/13/84/601384c107b5e92bc9e4e4193f0b92ec.jpg"
+                            alt="Product 1" alt="Product 3">
                     </div>
                 </div>
-                
+
             </div>
 
             <!-- image slider end -->
 
             <div class="about_product">
                 <h3>Duo Delight: Black Tee with Tom & Jerry Playful Print</h3>
-                <p>"Step into nostalgia with our Black Tom and Jerry Tee! Fun meets fashion in this comfy classic. Grab yours now and turn heads with timeless cartoon charm. Limited stock, unlimited style!"</p>
-                <p class="price">Rs 299</p>
+                <p>"Step into nostalgia with our Black Tom and Jerry Tee! Fun meets fashion in this comfy classic. Grab
+                    yours now and turn heads with timeless cartoon charm. Limited stock, unlimited style!"</p>
+                <p class="price">Rs 99</p>
 
                 <label for="size">Select Size:</label>
                 <select id="size" name="size">
@@ -55,7 +62,9 @@
                 </select>
 
                 <div class="button-container">
-                    <button id="buyNowbtn" onclick="buyNow('Product 1', 299)">Buy Now</button>
+                    <button id="buyNowbtn"
+                        onclick="redirectToCategory('buynow_btn','https://razorpay.com/payment-button/pl_NK6UaWEiLaXBpU/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button')">Buy
+                        Now</button>
                 </div>
 
             </div>
@@ -82,7 +91,8 @@
             <p><strong>Free Shipping:</strong></p>
             <ul>
                 <li>We offer free shipping on all orders.</li>
-                <li>Your order will be processed within 1-2 business days, and you can expect delivery within 5-15 business days.</li>
+                <li>Your order will be processed within 1-2 business days, and you can expect delivery within 5-15
+                    business days.</li>
             </ul>
 
             <p><strong>Contact Us:</strong></p>
@@ -100,7 +110,11 @@
 
     <footer>
         <button id="cart_btn" class="btn" onclick="alert('This Feature is Under Development !! Please Buy Directly')">ADD TO CART</button>
-        <button id="buynow_btn" onclick="redirectToCategory('buynow_btn','payment.html')" class="btn">BUY NOW</button>
+
+        <button id="buynow_btn"
+            onclick="redirectToCategory('buynow_btn','https://razorpay.com/payment-button/pl_NK6UaWEiLaXBpU/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button')"
+            class="btn">BUY NOW
+        </button>
     </footer>
 
     <script src="products.js"></script>
