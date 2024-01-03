@@ -99,6 +99,7 @@
    }
 
    .carousel-item {
+    
        flex: 0 0 100%;
        /* Set flex-basis to 100% */
    }
@@ -164,18 +165,19 @@
    }
 
    .product_box {
+       cursor: pointer;
        padding: 2px;
        display: flex;
        flex-direction: column;
-       height: 45vh;
-       width: 185px;
+       height: 60vh;
+       width: 225px;
        border: 0.1px solid gray;
        margin: 1px;
    }
 
    .product_box img {
        object-position: center;
-       height: 200px;
+       height: 300px;
    }
 
    .product_box .brand_name {
@@ -204,6 +206,13 @@
 
    /* Product Section End */
 
+   
+    #pre_footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(229, 83, 83);
+    }
    /* Footer Styles */
    footer {
        background-color: #333;
@@ -268,14 +277,14 @@
            height: 35vh;
            border: 1px solid black;
            margin: 2px;
-           height: 35vh;
+           height: 42vh;
            width: 170px;
        }
 
        .product_box img {
            object-position: center;
            overflow: hidden;
-           height: 200px;
+           height: 320px;
        }
    }
 

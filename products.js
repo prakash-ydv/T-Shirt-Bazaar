@@ -47,6 +47,6 @@ function updateSlidePosition() {
     slides.style.transform = `translateX(${-currentSlide * 100}%)`;
 }
 
-setInterval(nextSlide, 4000);
+setInterval(nextSlide, 3000);
 
 // image slider end
