@@ -173,10 +173,12 @@
        width: 225px;
        border: 0.05px solid rgb(171, 171, 171);
        margin: 1px;
+       overflow: hidden;
    }
 
    .product_box img {
        object-position: center;
+       width: fit-content;
        height: 290px;
    }
 
